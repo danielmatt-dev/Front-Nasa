@@ -1,0 +1,148 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+}
+
+/* Clase de la aplicación principal */
+.App {
+  text-align: center;
+}
+
+/* Logo de la aplicación */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Encabezado de la aplicación */
+.App-header {
+  background-color: #0073e6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* Enlaces de la aplicación */
+.App-link {
+  color: #61dafb;
+}
+
+/* Animación del logo de la aplicación */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilo de los enlaces en la lista */
+.link-container {
+  display: flex;
+  align-items: start;
+  padding: 16px;
+  border-bottom: 1px solid #e6e6e6;
+  background-color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+.link-container:nth-child(odd) {
+  background-color: #e6f7ff;
+}
+
+.link-container:hover {
+  background-color: #d1eaff;
+}
+
+/* Botón de votación */
+.vote-button {
+  cursor: pointer;
+  margin-right: 16px;
+  color: #0073e6;
+  transition: color 0.3s;
+}
+
+.vote-button:hover {
+  color: #005bb5;
+}
+
+/* Contenido del enlace */
+.link-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-image {
+  max-width: 100px;
+  margin-right: 16px;
+  border-radius: 8px;
+}
+
+.link-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.link-description {
+  font-size: 14px;
+  color: #333333;
+}
+
+.gray {
+  color: #828282;
+}
+
+/* Botón */
+.button {
+  font-family: monospace;
+  font-size: 10pt;
+  color: white;
+  background-color: #0073e6;
+  text-align: center;
+  padding: 2px 6px 3px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: #005bb5;
+  cursor: pointer;
+  max-width: 250px;
+  border-radius: 8px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.button:hover {
+  background-color: #005bb5;
+  border-color: #003f7f;
+}
+
+/* Fondo de encabezado naranja */
+.orange {
+  background-color: #61dafb;
+  padding: 10px;
+}
+
+.background-gray {
+  background-color: rgb(246, 246, 239);
+}
+
+.f11 {
+  font-size: 11px;
+}
+
+.w85 {
+  width: 85%;
+}
