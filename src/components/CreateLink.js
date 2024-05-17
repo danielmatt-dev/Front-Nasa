@@ -19,22 +19,7 @@ const CreateLink = () => {
       roverName: formState.roverName,
       cameraName: formState.cameraName,
       earthDate: formState.earthDate
-    },
-    update: (cache, { data: { createImage } }) => {
-      const data = cache.readQuery({
-        query: FEED_QUERY,
-      });
-
-      cache.writeQuery({
-        query: FEED_QUERY,
-        data: {
-          feed: {
-            links: [createImage, ...data.feed.links]
-          }
-        },
-      });
-    },
-    onCompleted: () => navigate('/')
+    }
   });
 
   return (
@@ -110,7 +95,7 @@ const CREATE_LINK_MUTATION = gql`
     $imgSrc: String!,
     $roverName: String!,
     $cameraName: String!,
-    $earthDate: String!
+    $earthDate: Date!
   ) {
     createImage(
       imgSrc: $imgSrc,
@@ -119,7 +104,7 @@ const CREATE_LINK_MUTATION = gql`
       earthDate: $earthDate
     ) {
       id
-      imgSrc
+      imgUrl
       roverName
       cameraName
       earthDate
