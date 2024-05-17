@@ -16,7 +16,8 @@ import {
 
 // 2
 const httpLink = createHttpLink({
-  uri: 'http://34.83.108.40:8080/graphql/'
+  // 35.227.167.96
+  uri: 'http://35.227.167.96:8080/graphql/'
 });
 
 const authLink = setContext((_, { headers }) => {
